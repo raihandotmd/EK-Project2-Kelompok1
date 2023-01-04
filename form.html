@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelayanan</title>
+</head>
+<body>
+    <!-- Pelayanan -->
+<!-- Nama Pasien -->
+<form class="needs-validation" novalidate>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationCustom01">Nama Pasien</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+            <div class="invalid-feedback">
+                Silakan Isi Nama Anda.
+            </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+    </div>
+    <!-- Dokter -->
+    <div class="col-md-3 mb-3">
+        <label for="validationCustom04">Pilih Dokter</label>
+        <select class="custom-select" id="validationCustom04" required>
+            <option selected disabled value="">Pilih...</option>
+            <option>Drs.Amelia</option>
+            <option>Dr.Made</option>
+            <option>Dra.Sujarta</option>
+        </select>
+        <div class="invalid-feedback">
+            Silakan Pilih Dokter.
+        </div>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <!-- Layanan -->
+    <div class="col-md-3 mb-3">
+        <label for="validationCustom04">Pilih Layanan</label>
+        <select class="custom-select" id="validationCustom04" required>
+            <option selected disabled value="">Pilih...</option>
+            <option>Perawatan Gigi Anak</option>
+            <option>Perawatan Kulit</option>
+            <option>Umum</option>
+        </select>
+        <div class="invalid-feedback">
+            Silakan pilih layanan.
+        </div>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <!-- Keluhan -->
+    <div class="mb-3">
+        <label for="validationTextarea">Keluhan</label>
+        <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Contoh: Sakit Gigi Graham"
+            required></textarea>
+        <div class="invalid-feedback">
+            Silakan Isi Keluhan Anda Disini.
+        </div>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <!-- Pembayaran -->
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="customRadioInline1">Pilih Pembayaran:</label>
+            <div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline" required
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Cash</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline" required
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Transfer</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline3" name="customRadioInline" required
+                        class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline3">eWallet</label>
+                </div>
+                <div class="invalid-feedback">
+                    Silakan Isi Nomor Telepon/HP Anda Disini.
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+
+            <!--Tanggal--->
+            <!--Boostrap CSS-->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+            <!--Flatpicker-->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+            <body class="vh-100">
+                <!--main content-->
+                <div class="mx-auto col-5">
+                    <label for="">Tanggal Periksa</label>
+                    <form>
+                        <input class="form-control" type="datetime-local" placeholder="Pilih Tanggal" >
+                    </form>
+                </div>
+                <!--Boostrap JS-->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="">
+                </script>
+                <!---Flatpicker-->
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                <script>
+                    flatpickr("input[type=datetime-local]", {});
+                </script>
+                <!--Tema-->
+                <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+            </body>
+
+            <!-- Umur -->
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Umur</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="colFormLabel" required
+                        placeholder="Masukan Umur Anda">
+                    <div class="invalid-feedback">
+                        Silakan Isi Umur Anda Disini.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nomor HP -->
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Telepon/HP</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="colFormLabel" required
+                        placeholder="Masukan Nomor HP Anda">
+                    <div class="invalid-feedback">
+                        Silakan Isi Nomor Telepon/HP Anda Disini.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+
+            <!--Email-->
+            <div class="form-group row">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="colFormLabel" required
+                        placeholder="Masukan Email Anda">
+                    <div class="invalid-feedback">
+                        Silakan Isi Email Anda Disini.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Setuju dengan syarat dan ketentuan
+                    </label>
+                    <div class="invalid-feedback">
+                        Anda harus setuju sebelum mengirimkan.
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+            <button class="btn btn-primary" type="submit">Reset</button>
+</form>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+
+<!-- #akhir skrip -->
+    
+</body>
+</html>
+
