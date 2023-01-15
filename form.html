@@ -1,210 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelayanan</title>
-</head>
-<body>
-    <!-- Pelayanan -->
-<!-- Nama Pasien -->
-<form class="needs-validation" novalidate>
-    <div class="form-row">
-        <div class="col-md-6 mb-3">
-            <label for="validationCustom01">Nama Pasien</label>
-            <input type="text" class="form-control" id="validationCustom01" value="" required>
-            <div class="invalid-feedback">
-                Silakan Isi Nama Anda.
-            </div>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
-        </div>
-    </div>
-    <!-- Dokter -->
-    <div class="col-md-3 mb-3">
-        <label for="validationCustom04">Pilih Dokter</label>
-        <select class="custom-select" id="validationCustom04" required>
-            <option selected disabled value="">Pilih...</option>
-            <option>Drs.Amelia</option>
-            <option>Dr.Made</option>
-            <option>Dra.Sujarta</option>
-        </select>
-        <div class="invalid-feedback">
-            Silakan Pilih Dokter.
-        </div>
-        <div class="valid-feedback">
-            Looks good!
-        </div>
-    </div>
-    <!-- Layanan -->
-    <div class="col-md-3 mb-3">
-        <label for="validationCustom04">Pilih Layanan</label>
-        <select class="custom-select" id="validationCustom04" required>
-            <option selected disabled value="">Pilih...</option>
-            <option>Perawatan Gigi Anak</option>
-            <option>Perawatan Kulit</option>
-            <option>Umum</option>
-        </select>
-        <div class="invalid-feedback">
-            Silakan pilih layanan.
-        </div>
-        <div class="valid-feedback">
-            Looks good!
-        </div>
-    </div>
-    <!-- Keluhan -->
-    <div class="mb-3">
-        <label for="validationTextarea">Keluhan</label>
-        <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Contoh: Sakit Gigi Graham"
-            required></textarea>
-        <div class="invalid-feedback">
-            Silakan Isi Keluhan Anda Disini.
-        </div>
-        <div class="valid-feedback">
-            Looks good!
-        </div>
-    </div>
-    <!-- Pembayaran -->
-    <div class="form-row">
-        <div class="col-md-6 mb-3">
-            <label for="customRadioInline1">Pilih Pembayaran:</label>
-            <div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline1" name="customRadioInline" required
-                        class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline1">Cash</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline2" name="customRadioInline" required
-                        class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline2">Transfer</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline3" name="customRadioInline" required
-                        class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline3">eWallet</label>
-                </div>
-                <div class="invalid-feedback">
-                    Silakan Isi Nomor Telepon/HP Anda Disini.
-                </div>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Klinik Gigi - Fatih</title>
 
-            <!--Tanggal--->
-            <!--Boostrap CSS-->
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-            <!--Flatpicker-->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <link rel="stylesheet" href="assets/css/main/app.css" />
+        <link rel="stylesheet" href="assets/css/main/app-dark.css" />
+        <link
+            rel="shortcut icon"
+            href="assets/images/logo/favicon.svg"
+            type="image/x-icon"
+        />
+        <link
+            rel="shortcut icon"
+            href="assets/images/logo/favicon.png"
+            type="image/png"
+        />
 
-            <body class="vh-100">
-                <!--main content-->
-                <div class="mx-auto col-5">
-                    <label for="">Tanggal Periksa</label>
-                    <form>
-                        <input class="form-control" type="datetime-local" placeholder="Pilih Tanggal" >
-                    </form>
-                </div>
-                <!--Boostrap JS-->
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="">
-                </script>
-                <!---Flatpicker-->
-                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-                <script>
-                    flatpickr("input[type=datetime-local]", {});
-                </script>
-                <!--Tema-->
-                <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
-            </body>
+        <link rel="stylesheet" href="assets/css/shared/iconly.css" />
+    </head>
 
-            <!-- Umur -->
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-2 col-form-label">Umur</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" id="colFormLabel" required
-                        placeholder="Masukan Umur Anda">
-                    <div class="invalid-feedback">
-                        Silakan Isi Umur Anda Disini.
+    <body>
+        <div id="app">
+            <div id="main" class="layout-horizontal">
+                <header class="mb-5">
+                    <div class="header d-block d-xl-none">
+                        <div class="header-top">
+                            <div
+                                class="d-flex align-items-center justify-content-between"
+                            >
+                                <!-- Burger button responsive -->
+                                <div class="menu-btn">
+                                    <a
+                                        href="#"
+                                        class="burger-btn d-inline-block d-xl-none"
+                                    >
+                                        <i
+                                            class="bi bi-justify fs-3 pe-4 pb-4"
+                                        ></i>
+                                    </a>
+                                </div>
+                                <!-- End Burger Button -->
+                                <div class="container justify-content-end">
+                                    <div class="menu-item ms-3">
+                                        <a
+                                            href="index.html"
+                                            class="menu-divnk h-100"
+                                        >
+                                            <img
+                                                src="assets/images/logo/logo.svg"
+                                                alt="Logo"
+                                                style="
+                                                    height: auto;
+                                                    width: 25px;
+                                                "
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="valid-feedback">
-                        Looks good!
+                    <nav class="main-navbar">
+                        <div
+                            class="d-flex container justify-content-between gap-3"
+                        >
+                            <ul class="w-100">
+                                <li class="menu-item active">
+                                    <a href="#" class="menu-link">
+                                        <span
+                                            ><i
+                                                class="bi bi-house-door-fill"
+                                            ></i>
+                                            Home</span
+                                        >
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        <span
+                                            ><i class="bi bi-stack"></i>
+                                            Layanan</span
+                                        >
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        <span
+                                            ><i
+                                                class="bi bi-journal-bookmark-fill"
+                                            ></i>
+                                            Booking</span
+                                        >
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        <span
+                                            ><i class="bi bi-star-fill"></i>
+                                            Testimoni</span
+                                        >
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">
+                                        <span
+                                            ><i class="bi bi-people-fill"></i>
+                                            Tentang Kami</span
+                                        >
+                                    </a>
+                                </li>
+                                <li
+                                    class="menu-item fw-semibold d-xl-none d-block"
+                                >
+                                    <a href="#" class="menu-link">
+                                        <span
+                                            ><i
+                                                class="bi bi-box-arrow-in-right"
+                                            ></i>
+                                            Login</span
+                                        >
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="menu-item order-first order-xl-last">
+                                    <div
+                                        class="theme-toggle d-flex gap-2 menu-link"
+                                    >
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            aria-hidden="true"
+                                            role="img"
+                                            class="iconify iconify--system-uicons"
+                                            width="20"
+                                            height="20"
+                                            preserveAspectRatio="xMidYMid meet"
+                                            viewBox="0 0 21 21"
+                                        >
+                                            <g
+                                                fill="none"
+                                                fill-rule="evenodd"
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <path
+                                                    d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
+                                                    opacity=".3"
+                                                ></path>
+                                                <g
+                                                    transform="translate(-210 -1)"
+                                                >
+                                                    <path
+                                                        d="M220.5 2.5v2m6.5.5l-1.5 1.5"
+                                                    ></path>
+                                                    <circle
+                                                        cx="220.5"
+                                                        cy="11.5"
+                                                        r="4"
+                                                    ></circle>
+                                                    <path
+                                                        d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"
+                                                    ></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <div
+                                            class="form-check form-switch fs-6 m-0"
+                                        >
+                                            <input
+                                                class="form-check-input me-0"
+                                                type="checkbox"
+                                                id="toggle-dark"
+                                                style="cursor: pointer"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                            ></label>
+                                        </div>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                                            aria-hidden="true"
+                                            role="img"
+                                            class="iconify iconify--mdi"
+                                            width="20"
+                                            height="20"
+                                            preserveAspectRatio="xMidYMid meet"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                fill="currentColor"
+                                                d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="gap-0 d-none d-xl-flex">
+                                <li class="menu-item">
+                                    <div class="container">
+                                        <div
+                                            class="d-flex align-items-center container"
+                                        >
+                                            <div class="search-bar">
+                                                <div class="input-group mw-100">
+                                                    <button
+                                                        class="btn btn-primary"
+                                                        type="button"
+                                                    >
+                                                        <i
+                                                            class="bi bi-search"
+                                                        ></i>
+                                                    </button>
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        placeholder="Search"
+                                                        style="max-width: 190px"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a
+                                        href="#"
+                                        class="menu-link align-items-start"
+                                    >
+                                        <i class="bi bi-box-arrow-in-right"></i>
+                                        Login
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+                <div class="container">
+                    <div class="card">
+                        <div class="card-header">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-right my-0">
+                                    <li class="breadcrumb-item">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li
+                                        class="breadcrumb-item active"
+                                        aria-current="page"
+                                    >
+                                        Booking
+                                    </li>
+                                </ol>
+                            </nav>
+                            <h4 class="card-title">
+                                Booking Periksa Dokter Gigi
+                            </h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-body">
+                                <form
+                                    class="form"
+                                    data-parsley-validate=""
+                                    novalidate=""
+                                >
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group mandatory">
+                                                <label
+                                                    for="nama-column"
+                                                    class="form-label"
+                                                    >Nama Pasien</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    id="nama-column"
+                                                    class="form-control"
+                                                    placeholder="isi nama pasien.."
+                                                    name="nama-column"
+                                                    data-parsley-required="true"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group mandatory">
+                                                <label
+                                                    for="dokter-column"
+                                                    class="form-label"
+                                                    >Pilih Dokter</label
+                                                >
+                                                <select
+                                                    class="form-select"
+                                                    id="basicSelect"
+                                                >
+                                                    <option>Drs. Amelia</option>
+                                                    <option>Dr. Made</option>
+                                                    <option>
+                                                        Dra. Sujarta
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group mandatory">
+                                                <label
+                                                    for="dokter-column"
+                                                    class="form-label"
+                                                    >Pilih Layanan</label
+                                                >
+                                                <select
+                                                    class="form-select"
+                                                    id="basicSelect"
+                                                >
+                                                    <option>
+                                                        Perawatan Gigi Anak
+                                                    </option>
+                                                    <option>
+                                                        Perawatan Kulit
+                                                    </option>
+                                                    <option>Umum</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 my-3">
+                                            <div class="form-group mandatory">
+                                                <label
+                                                    for="keluhan-column"
+                                                    class="form-label"
+                                                    >Keluhan</label
+                                                >
+                                                <div class="form-floating">
+                                                    <textarea
+                                                        class="form-control"
+                                                        placeholder="Leave a comment here"
+                                                        id="floatingTextarea"
+                                                        style="height: 5rem"
+                                                        data-parsley-required="true"
+                                                    ></textarea>
+                                                    <label
+                                                        for="floatingTextarea"
+                                                        class="fw-light opacity-75"
+                                                        >isi keluhan..</label
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div
+                                                class="form-group mandatory is-valid"
+                                            >
+                                                <fieldset>
+                                                    <label class="form-label">
+                                                        Pilih Pembayaran
+                                                    </label>
+                                                    <div
+                                                        class="d-flex gap-3 ms-1"
+                                                    >
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="radio"
+                                                                name="flexRadioDefault"
+                                                                id="flexRadioDefault1"
+                                                                data-parsley-required="true"
+                                                                data-parsley-multiple="flexRadioDefault"
+                                                                data-parsley-id="21"
+                                                            />
+                                                            <label
+                                                                class="form-check-label form-label"
+                                                                for="flexRadioDefault1"
+                                                            >
+                                                                Cash
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="radio"
+                                                                name="flexRadioDefault"
+                                                                id="flexRadioDefault2"
+                                                                data-parsley-multiple="flexRadioDefault"
+                                                            />
+                                                            <label
+                                                                class="form-check-label form-label"
+                                                                for="flexRadioDefault2"
+                                                            >
+                                                                Transfer
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input
+                                                                class="form-check-input"
+                                                                type="radio"
+                                                                name="flexRadioDefault"
+                                                                id="flexRadioDefault3"
+                                                                data-parsley-multiple="flexRadioDefault"
+                                                            />
+                                                            <label
+                                                                class="form-check-label form-label"
+                                                                for="flexRadioDefault3"
+                                                            >
+                                                                E-Wallet
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group mandatory">
+                                                <label
+                                                    for="tanggal-periksa-id-column"
+                                                    class="form-label"
+                                                    >Tanggal Periksa</label
+                                                >
+                                                <input
+                                                    type="date"
+                                                    id="tanggal-periksa-id-column"
+                                                    class="form-control"
+                                                    name="tanggal-periksa-id-column"
+                                                    placeholder="isi angka.."
+                                                    min="2023-01-01"
+                                                    value="2023-01-01"
+                                                    data-parsley-required="true"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group mandatory">
+                                                <label
+                                                    for="umur-id-column"
+                                                    class="form-label"
+                                                    >Umur</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    id="number-id-column"
+                                                    class="form-control"
+                                                    name="number-id-column"
+                                                    placeholder="isi angka.."
+                                                    data-parsley-required="true"
+                                                    data-parsley-pattern="/[0-9]\d*/"
+                                                    data-parsley-pattern-message="Only numbers allowed"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <div class="form-group mandatory">
+                                                <label
+                                                    for="phone-id-column"
+                                                    class="form-label"
+                                                    >Telpon/HP</label
+                                                >
+                                                <input
+                                                    type="text"
+                                                    id="number-id-column"
+                                                    class="form-control"
+                                                    name="number-id-column"
+                                                    placeholder="isi angka.."
+                                                    data-parsley-required="true"
+                                                    data-parsley-pattern="/[0-9]\d*/"
+                                                    data-parsley-pattern-message="Only numbers allowed"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mb-4">
+                                            <div class="form-group mandatory">
+                                                <label
+                                                    for="email-id-column"
+                                                    class="form-label"
+                                                    >Email</label
+                                                >
+                                                <input
+                                                    type="email"
+                                                    id="email-id-column"
+                                                    class="form-control"
+                                                    name="email-id-column"
+                                                    placeholder="isi Email.."
+                                                    data-parsley-required="true"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div
+                                            class="col-12 d-flex justify-content-end"
+                                        >
+                                            <button
+                                                type="submit"
+                                                class="btn btn-primary me-1 mb-1"
+                                            >
+                                                Submit
+                                            </button>
+                                            <button
+                                                type="reset"
+                                                class="btn btn-light-secondary me-1 mb-1"
+                                            >
+                                                Reset
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Nomor HP -->
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-2 col-form-label">Telepon/HP</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" id="colFormLabel" required
-                        placeholder="Masukan Nomor HP Anda">
-                    <div class="invalid-feedback">
-                        Silakan Isi Nomor Telepon/HP Anda Disini.
-                    </div>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-            </div>
-
-            <!--Email-->
-            <div class="form-group row">
-                <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="colFormLabel" required
-                        placeholder="Masukan Email Anda">
-                    <div class="invalid-feedback">
-                        Silakan Isi Email Anda Disini.
-                    </div>
-                    <div class="valid-feedback">
-                        Looks good!
+            <footer>
+                <div class="container">
+                    <div class="footer clearfix mb-0 text-muted">
+                        <div class="float-start">
+                            <p>2023 &copy; Raihan</p>
+                        </div>
+                        <div class="float-end">
+                            <p>
+                                Crafted with
+                                <span class="text-danger"
+                                    ><i class="bi bi-heart"></i
+                                ></span>
+                                by
+                                <a href="#">Mahasiswa STT-NF</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </footer>
+        </div>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/pages/horizontal-layout.js"></script>
 
-
-
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Setuju dengan syarat dan ketentuan
-                    </label>
-                    <div class="invalid-feedback">
-                        Anda harus setuju sebelum mengirimkan.
-                    </div>
-                </div>
-            </div>
-            <button class="btn btn-primary" type="submit">Submit</button>
-            <button class="btn btn-primary" type="submit">Reset</button>
-</form>
-
-<script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-        'use strict';
-        window.addEventListener('load', function () {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function (form) {
-                form.addEventListener('submit', function (event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-</script>
-
-<!-- #akhir skrip -->
-    
-</body>
+        <script src="assets/extensions/jquery/jquery.min.js"></script>
+        <script src="assets/extensions/parsleyjs/parsley.min.js"></script>
+        <script src="assets/js/pages/parsley.js"></script>
+    </body>
 </html>
-
