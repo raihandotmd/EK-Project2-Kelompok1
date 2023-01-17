@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login - Admin Klinik Fatih</title>
+        <title>Sahabat Gigi | Admin Login</title>
         <link rel="stylesheet" href="assets/css/main/app.css" />
         <link rel="stylesheet" href="assets/css/pages/auth.css" />
         <link
@@ -16,6 +16,10 @@
             href="assets/images/logo/favicon.png"
             type="image/png"
         />
+        <link
+            rel="stylesheet"
+            href="assets/extensions/sweetalert2/sweetalert2.min.css"
+        />
     </head>
 
     <body>
@@ -27,16 +31,27 @@
                 style="max-width: 560px"
             >
                 <h1 class="auth-title">Log in.</h1>
-                <p class="auth-subtitle mb-5">Put in your data account</p>
+                <p class="auth-subtitle mb-3">
+                    Put in your data account <br /><br />
+                    username: admin <br />
+                    password: admin123
+                </p>
 
-                <form action="index.html">
+                <form
+                    data-parsley-validate=""
+                    novalidate=""
+                    onsubmit="return false"
+                >
                     <div
                         class="form-group position-relative has-icon-left mb-4"
                     >
                         <input
+                            id="username"
                             type="text"
                             class="form-control form-control-xl"
                             placeholder="Username"
+                            data-parsley-required="true"
+                            data-parsley-required-message="Please insert your name"
                         />
                         <div class="form-control-icon">
                             <i class="bi bi-person"></i>
@@ -46,9 +61,12 @@
                         class="form-group position-relative has-icon-left mb-4"
                     >
                         <input
+                            id="password"
                             type="password"
                             class="form-control form-control-xl"
                             placeholder="Password"
+                            data-parsley-required="true"
+                            data-parsley-required-message="Please insert your password"
                         />
                         <div class="form-control-icon">
                             <i class="bi bi-shield-lock"></i>
@@ -71,20 +89,56 @@
                         </label>
                     </div>
                     <button
+                        id="login"
                         class="btn btn-primary btn-block btn-lg shadow-lg mt-5"
                     >
                         Log in
                     </button>
                 </form>
+
                 <div class="text-center mt-5 text-lg fs-4">
                     <p class="text-gray-600">
                         Don't have an account?
-                        <a href="auth-register.html" class="font-bold"
-                            >Sign up</a
-                        >.
+                        <a href="register.html" class="font-bold">Sign up</a>.
                     </p>
                 </div>
             </div>
         </div>
+        <script>
+            document.getElementById("login").addEventListener("click", (e) => {
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                if (username && password) {
+                    if (username == "admin" && password == "admin123") {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Success Login!",
+                        });
+                        Swal.getConfirmButton(
+                            setTimeout(() => {
+                                window.location.href = "databooking.html";
+                            }, 2500)
+                        );
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "Your username or password is invalid check your data again.",
+                            footer: "<a href='register.html'>Don't have account? click me!</a>",
+                        });
+                    }
+                }
+            });
+        </script>
+
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <script src="assets/js/pages/sweetalert2.js"></script>
+        <script src="assets/extensions/sweetalert2/sweetalert2.min.js"></script>
+
+        <script src="assets/extensions/jquery/jquery.min.js"></script>
+        <script src="assets/extensions/parsleyjs/parsley.min.js"></script>
+        <script src="assets/js/pages/parsley.js"></script>
     </body>
 </html>
