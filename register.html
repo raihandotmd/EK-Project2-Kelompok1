@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Login - Admin Klinik Fatih</title>
+        <title>Sahabat Gigi | Register</title>
         <link rel="stylesheet" href="assets/css/main/app.css" />
         <link rel="stylesheet" href="assets/css/pages/auth.css" />
         <link
@@ -15,6 +15,10 @@
             rel="shortcut icon"
             href="assets/images/logo/favicon.png"
             type="image/png"
+        />
+        <link
+            rel="stylesheet"
+            href="assets/extensions/sweetalert2/sweetalert2.min.css"
         />
     </head>
 
@@ -31,7 +35,11 @@
                     Put in your data in the fields below.
                 </p>
 
-                <form action="index.html">
+                <form
+                    data-parsley-validate=""
+                    novalidate=""
+                    onsubmit="return false"
+                >
                     <div
                         class="form-group position-relative has-icon-left mb-4"
                     >
@@ -39,6 +47,7 @@
                             type="text"
                             class="form-control form-control-xl"
                             placeholder="Email"
+                            data-parsley-required="true"
                         />
                         <div class="form-control-icon">
                             <i class="bi bi-envelope"></i>
@@ -51,6 +60,7 @@
                             type="text"
                             class="form-control form-control-xl"
                             placeholder="Username"
+                            data-parsley-required="true"
                         />
                         <div class="form-control-icon">
                             <i class="bi bi-person"></i>
@@ -63,6 +73,7 @@
                             type="password"
                             class="form-control form-control-xl"
                             placeholder="Password"
+                            data-parsley-required="true"
                         />
                         <div class="form-control-icon">
                             <i class="bi bi-shield-lock"></i>
@@ -75,6 +86,7 @@
                             type="password"
                             class="form-control form-control-xl"
                             placeholder="Confirm Password"
+                            data-parsley-required="true"
                         />
                         <div class="form-control-icon">
                             <i class="bi bi-shield-lock"></i>
@@ -89,10 +101,16 @@
                 <div class="text-center mt-5 text-lg fs-4">
                     <p class="text-gray-600">
                         Already have an account?
-                        <a href="auth-login.html" class="font-bold">Log in</a>.
+                        <a href="login.html" class="font-bold">Log in</a>.
                     </p>
                 </div>
             </div>
         </div>
+        <script src="assets/js/pages/sweetalert2.js"></script>
+        <script src="assets/extensions/sweetalert2/sweetalert2.min.js"></script>
+
+        <script src="assets/extensions/jquery/jquery.min.js"></script>
+        <script src="assets/extensions/parsleyjs/parsley.min.js"></script>
+        <script src="assets/js/pages/parsley.js"></script>
     </body>
 </html>
