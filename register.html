@@ -32,7 +32,8 @@
             >
                 <h1 class="auth-title">Sign Up</h1>
                 <p class="auth-subtitle mb-4">
-                    Put in your data in the fields below.
+                    Put in your data in the fields below. <br /><br />
+                    Remember, this is just a prototype not actually working.
                 </p>
 
                 <form
@@ -45,6 +46,7 @@
                     >
                         <input
                             type="text"
+                            id="email"
                             class="form-control form-control-xl"
                             placeholder="Email"
                             data-parsley-required="true"
@@ -58,6 +60,7 @@
                     >
                         <input
                             type="text"
+                            id="username"
                             class="form-control form-control-xl"
                             placeholder="Username"
                             data-parsley-required="true"
@@ -71,6 +74,7 @@
                     >
                         <input
                             type="password"
+                            id="password"
                             class="form-control form-control-xl"
                             placeholder="Password"
                             data-parsley-required="true"
@@ -84,6 +88,7 @@
                     >
                         <input
                             type="password"
+                            id="confirm-pass"
                             class="form-control form-control-xl"
                             placeholder="Confirm Password"
                             data-parsley-required="true"
@@ -94,6 +99,7 @@
                     </div>
                     <button
                         class="btn btn-primary btn-block btn-lg shadow-lg mt-5"
+                        id="register"
                     >
                         Sign Up
                     </button>
@@ -106,6 +112,35 @@
                 </div>
             </div>
         </div>
+        <script>
+            document
+                .getElementById("register")
+                .addEventListener("click", (e) => {
+                    let email = document.getElementById("email").value;
+                    let username = document.getElementById("username").value;
+                    let password = document.getElementById("password").value;
+                    let confirmPass =
+                        document.getElementById("confirm-pass").value;
+                    if (username && password && confirmPass && email) {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Success Registering Your Account!",
+                        });
+                        Swal.getConfirmButton(
+                            setTimeout(() => {
+                                window.location.href = "login.html";
+                            }, 3000)
+                        );
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Oops...",
+                            text: "You have to enter your data in fields!",
+                        });
+                    }
+                });
+        </script>
+
         <script src="assets/js/pages/sweetalert2.js"></script>
         <script src="assets/extensions/sweetalert2/sweetalert2.min.js"></script>
 
