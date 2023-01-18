@@ -113,18 +113,19 @@
                         Swal.fire({
                             icon: "success",
                             title: "Success Login!",
+                            text: "Redirecting you to the Admin page.. in 3s..",
                         });
                         Swal.getConfirmButton(
                             setTimeout(() => {
-                                window.location.href = "databooking.html";
-                            }, 2500)
+                                window.location.href = "admin_klinik.html";
+                            }, 3000)
                         );
                     } else {
                         Swal.fire({
                             icon: "error",
                             title: "Oops...",
                             text: "Your username or password is invalid check your data again.",
-                            footer: "<a href='register.html'>Don't have account? click me!</a>",
+                            footer: "<a href='register.html'>Don't have account? Register here.</a>",
                         });
                     }
                 }

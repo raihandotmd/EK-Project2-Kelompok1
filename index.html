@@ -17,8 +17,7 @@
             href="assets/images/logo/favicon.png"
             type="image/png"
         />
-
-        <link rel="stylesheet" href="assets/css/shared/iconly.css" />
+        <link rel="stylesheet" href="assets/css/main/style.css" />
     </head>
 
     <body>
@@ -78,7 +77,10 @@
                                     </a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="#" class="menu-link">
+                                    <a
+                                        href="detail_layanan.html"
+                                        class="menu-link"
+                                    >
                                         <span
                                             ><i class="bi bi-stack"></i>
                                             Layanan</span
@@ -87,7 +89,7 @@
                                 </li>
 
                                 <li class="menu-item">
-                                    <a href="#" class="menu-link">
+                                    <a href="booking.html" class="menu-link">
                                         <span
                                             ><i
                                                 class="bi bi-journal-bookmark-fill"
@@ -117,7 +119,7 @@
                                 <li
                                     class="menu-item fw-semibold d-xl-none d-block"
                                 >
-                                    <a href="#" class="menu-link">
+                                    <a href="login.html" class="menu-link">
                                         <span
                                             ><i
                                                 class="bi bi-box-arrow-in-right"
@@ -233,7 +235,7 @@
 
                                 <li class="menu-item">
                                     <a
-                                        href="#"
+                                        href="login.html"
                                         class="menu-link align-items-start"
                                     >
                                         <i class="bi bi-box-arrow-in-right"></i>
@@ -256,9 +258,15 @@
                                     <div class="card-header pb-1">
                                         <h4>Selamat Datang!</h4>
                                     </div>
-                                    <div class="card-body" >
-                                        <p style="text-align: justify; text-indent:1rem;">
-                                            Klinik Sahabat Gigi, klinik kesehatan gigi yang aman dan
+                                    <div class="card-body">
+                                        <p
+                                            style="
+                                                text-align: justify;
+                                                text-indent: 1rem;
+                                            "
+                                        >
+                                            Klinik Sahabat Gigi, klinik
+                                            kesehatan gigi yang aman dan
                                             terpercaya. Kami di sini akan
                                             memastikan untuk memberikan
                                             perawatan gigi terbaik untuk Anda
@@ -277,7 +285,10 @@
                                                     <div
                                                         class="card-body py-2 ps-2"
                                                     >
-                                                        <h5 class="card-title">
+                                                        <h5
+                                                            class="card-title"
+                                                            id="layanan"
+                                                        >
                                                             Layanan
                                                         </h5>
                                                     </div>
@@ -293,10 +304,13 @@
                                                         </div>
                                                         <div class="col-md-8">
                                                             <div
-                                                                class="card-body  py-md-0 pt-sm-3"
+                                                                class="card-body py-md-0 pt-sm-3"
                                                             >
                                                                 <p
-                                                                    class="card-text" style="font-size: 0.95rem;" 
+                                                                    class="card-text"
+                                                                    style="
+                                                                        font-size: 0.95rem;
+                                                                    "
                                                                 >
                                                                     Kami
                                                                     menyediakan
@@ -326,7 +340,10 @@
                                                     <div
                                                         class="card-body py-2 ps-2"
                                                     >
-                                                        <h5 class="card-title">
+                                                        <h5
+                                                            class="card-title"
+                                                            id="jadwal"
+                                                        >
                                                             Jadwal Praktik
                                                         </h5>
                                                     </div>
@@ -344,15 +361,27 @@
                                                             <div
                                                                 class="card-body py-md-0 pt-sm-3"
                                                             >
-                                                                <p
-                                                                    class="card-text " 
+                                                                <ul
+                                                                    style="
+                                                                        font-size: 0.95rem;
+                                                                    "
                                                                 >
-                                                                    <ul style="font-size: 0.95rem;" >
-                                                                        <li>Senin - Jumat: 9:00 - 18:00</li>
-                                                                        <li>Sabtu: 9:00 - 14:00</li>
-                                                                        <li>Minggu: Tutup</li>
-                                                                    </ul>
-                                                                </p>
+                                                                    <li>
+                                                                        Senin -
+                                                                        Jumat:
+                                                                        9:00 -
+                                                                        18:00
+                                                                    </li>
+                                                                    <li>
+                                                                        Sabtu:
+                                                                        9:00 -
+                                                                        14:00
+                                                                    </li>
+                                                                    <li>
+                                                                        Minggu:
+                                                                        Tutup
+                                                                    </li>
+                                                                </ul>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -371,13 +400,13 @@
                                 <div class="card-body">
                                     <ul class="list-unstyled">
                                         <li class="menu-item">
-                                            <a href="#">Layanan</a>
+                                            <a href="#layanan">Layanan</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="#">Jadwal</a>
+                                            <a href="#jadwal">Jadwal</a>
                                         </li>
                                         <li class="menu-item">
-                                            <a href="#">Dokter Kami</a>
+                                            <a href="#dokter">Dokter Kami</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -390,7 +419,10 @@
                     <section id="groups">
                         <div class="row match-height">
                             <div class="col-12 mt-3 mb-1">
-                                <h4 class="section-title text-uppercase">
+                                <h4
+                                    class="section-title text-uppercase"
+                                    id="dokter"
+                                >
                                     Daftar Dokter Gigi Kami
                                 </h4>
                             </div>
@@ -400,9 +432,11 @@
                                 <div class="card-group mb-5">
                                     <div class="card">
                                         <div class="card-content">
-                                            <a href="#">
+                                            <a
+                                                href="pages/profile/profile1.html"
+                                            >
                                                 <img
-                                                    class="card-img-top img-fluid"
+                                                    class="card-img-top img-fluid img-item"
                                                     src="assets/images/faces/1.jpg"
                                                     alt="Card image cap"
                                                 />
@@ -416,9 +450,11 @@
                                     </div>
                                     <div class="card">
                                         <div class="card-content">
-                                            <a href="#">
+                                            <a
+                                                href="pages/profile/profile2.html"
+                                            >
                                                 <img
-                                                    class="card-img-top img-fluid"
+                                                    class="card-img-top img-fluid img-item"
                                                     src="assets/images/faces/2.jpg"
                                                     alt="Card image cap"
                                                 />
@@ -432,9 +468,11 @@
                                     </div>
                                     <div class="card">
                                         <div class="card-content">
-                                            <a href="#">
+                                            <a
+                                                href="pages/profile/profile3.html"
+                                            >
                                                 <img
-                                                    class="card-img-top img-fluid"
+                                                    class="card-img-top img-fluid img-item"
                                                     src="assets/images/faces/3.jpg"
                                                     alt="Card image cap"
                                                 />
@@ -448,9 +486,11 @@
                                     </div>
                                     <div class="card">
                                         <div class="card-content">
-                                            <a href="#">
+                                            <a
+                                                href="pages/profile/profile1.html"
+                                            >
                                                 <img
-                                                    class="card-img-top img-fluid"
+                                                    class="card-img-top img-fluid img-item"
                                                     src="assets/images/faces/4.jpg"
                                                     alt="Card image cap"
                                                 />
@@ -492,8 +532,5 @@
         <script src="assets/js/bootstrap.js"></script>
         <script src="assets/js/app.js"></script>
         <script src="assets/js/pages/horizontal-layout.js"></script>
-
-        <script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
-        <script src="assets/js/pages/dashboard.js"></script>
     </body>
 </html>
