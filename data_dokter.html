@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sahabat Gigi | Admin Page</title>
+
+        <link rel="stylesheet" href="assets/css/main/app.css" />
+        <link rel="stylesheet" href="assets/css/main/app-dark.css" />
+        <link
+            rel="shortcut icon"
+            href="assets/images/logo/favicon.svg"
+            type="image/x-icon"
+        />
+        <link
+            rel="shortcut icon"
+            href="assets/images/logo/favicon.png"
+            type="image/png"
+        />
+    </head>
+
+    <body>
+        <script src="assets/js/initTheme.js"></script>
+        <div id="app">
+            <div id="sidebar" class="active">
+                <div class="sidebar-wrapper active">
+                    <div class="sidebar-header position-relative">
+                        <div
+                            class="d-flex justify-content-between align-items-center"
+                        >
+                            <div class="logo mx-3">
+                                <a href="index.html"
+                                    ><img
+                                        src="assets/images/logo/logo.svg"
+                                        alt="Logo"
+                                        srcset=""
+                                        style="
+                                            height: auto;
+                                            width: 40px;
+                                            object-fit: cover;
+                                        "
+                                /></a>
+                            </div>
+                            <div
+                                class="theme-toggle d-flex gap-2 align-items-center mt-2"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true"
+                                    role="img"
+                                    class="iconify iconify--system-uicons"
+                                    width="20"
+                                    height="20"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 21 21"
+                                >
+                                    <g
+                                        fill="none"
+                                        fill-rule="evenodd"
+                                        stroke="currentColor"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path
+                                            d="M10.5 14.5c2.219 0 4-1.763 4-3.982a4.003 4.003 0 0 0-4-4.018c-2.219 0-4 1.781-4 4c0 2.219 1.781 4 4 4zM4.136 4.136L5.55 5.55m9.9 9.9l1.414 1.414M1.5 10.5h2m14 0h2M4.135 16.863L5.55 15.45m9.899-9.9l1.414-1.415M10.5 19.5v-2m0-14v-2"
+                                            opacity=".3"
+                                        ></path>
+                                        <g transform="translate(-210 -1)">
+                                            <path
+                                                d="M220.5 2.5v2m6.5.5l-1.5 1.5"
+                                            ></path>
+                                            <circle
+                                                cx="220.5"
+                                                cy="11.5"
+                                                r="4"
+                                            ></circle>
+                                            <path
+                                                d="m214 5l1.5 1.5m5 14v-2m6.5-.5l-1.5-1.5M214 18l1.5-1.5m-4-5h2m14 0h2"
+                                            ></path>
+                                        </g>
+                                    </g>
+                                </svg>
+                                <div class="form-check form-switch fs-6">
+                                    <input
+                                        class="form-check-input me-0"
+                                        type="checkbox"
+                                        id="toggle-dark"
+                                        style="cursor: pointer"
+                                    />
+                                    <label class="form-check-label"></label>
+                                </div>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    aria-hidden="true"
+                                    role="img"
+                                    class="iconify iconify--mdi"
+                                    width="20"
+                                    height="20"
+                                    preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        fill="currentColor"
+                                        d="m17.75 4.09l-2.53 1.94l.91 3.06l-2.63-1.81l-2.63 1.81l.91-3.06l-2.53-1.94L12.44 4l1.06-3l1.06 3l3.19.09m3.5 6.91l-1.64 1.25l.59 1.98l-1.7-1.17l-1.7 1.17l.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95l2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85c-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14c.4-.4.82-.76 1.27-1.08c.75-.53 1.93.36 1.85 1.19c-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82c-2.81 3.14-2.7 7.96.31 10.98c3.02 3.01 7.84 3.12 10.98.31Z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <div class="sidebar-toggler x">
+                                <a
+                                    href="#"
+                                    class="sidebar-hide d-xl-none d-block"
+                                    ><i class="bi bi-x bi-middle"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul class="menu" style="height: 72vh">
+                            <li class="sidebar-title">Menu</li>
+
+                            <li class="sidebar-item">
+                                <a href="index.html" class="sidebar-link">
+                                    <i class="bi bi-grid-fill"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a
+                                    href="admin_klinik.html"
+                                    class="sidebar-link"
+                                >
+                                    <i class="bi bi-journal-bookmark-fill"></i>
+                                    <span>Booking</span>
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item active">
+                                <div class="sidebar-link">
+                                    <i class="bi bi-people-fill"></i>
+                                    <span>Dokter</span>
+                                </div>
+                            </li>
+
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    <i class="bi bi-diagram-3-fill"></i>
+                                    <span>Produk/Layanan</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu">
+                            <li class="sidebar-item">
+                                <a
+                                    href="index.html"
+                                    class="container btn btn-danger text-light"
+                                    style="border-radius: 0.5rem"
+                                >
+                                    <i
+                                        class="bi bi-box-arrow-right text-light"
+                                    ></i>
+                                    <span>Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="main">
+                <header class="mb-3 row align-items-center">
+                    <div class="col-2">
+                        <a href="#" class="burger-btn d-block d-xl-none">
+                            <i class="bi bi-justify fs-3"></i>
+                        </a>
+                    </div>
+                    <div class="col-10 d-xl-none">
+                        <div class="container">
+                            <div class="d-flex">
+                                <div
+                                    class="input-group mw-100 justify-content-end"
+                                >
+                                    <button
+                                        class="btn btn-primary"
+                                        type="button"
+                                    >
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Search"
+                                        style="max-width: 100px"
+                                    />
+                                </div>
+                                <div class="ms-3">
+                                    <div class="container">
+                                        <div class="dropdown">
+                                            <a
+                                                href="#"
+                                                id="topbarUserDropdown"
+                                                class="user-dropdown d-flex align-items-center dropend dropdown-toggle"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false"
+                                            >
+                                                <div
+                                                    class="avatar avatar-md2 m-0"
+                                                >
+                                                    <img
+                                                        src="assets/images/faces/1.jpg"
+                                                        alt="Avatar"
+                                                    />
+                                                </div>
+                                            </a>
+                                            <ul
+                                                class="dropdown-menu dropdown-menu-end shadow-lg"
+                                                aria-labelledby="topbarUserDropdown"
+                                            >
+                                                <li>
+                                                    <a
+                                                        class="dropdown-item"
+                                                        href="#"
+                                                        >My Account</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="dropdown-item"
+                                                        href="#"
+                                                        >Settings</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <hr
+                                                        class="dropdown-divider"
+                                                    />
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="dropdown-item"
+                                                        href="auth-login.html"
+                                                        >Logout</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="page-heading">
+                    <div class="page-title mb-5">
+                        <div
+                            class="row align-items-center justify-content-between"
+                        >
+                            <div
+                                class="col-12 col-md-7 order-md-1 order-last mt-2"
+                            >
+                                <h2>
+                                    Admin - Klinik Kesehatan Gigi Fatih - Bogor
+                                </h2>
+                            </div>
+                            <div
+                                class="col-12 col-md-5 order-md-2 order-first d-xl-inline-block d-none"
+                            >
+                                <div
+                                    class="d-flex align-items-center container justify-content-end"
+                                >
+                                    <div class="search-bar">
+                                        <div class="input-group mw-100">
+                                            <button
+                                                class="btn btn-primary"
+                                                type="button"
+                                            >
+                                                <i class="bi bi-search"></i>
+                                            </button>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Search"
+                                                style="max-width: 180px"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="btn-group ms-3">
+                                        <div class="dropdown">
+                                            <a
+                                                href="#"
+                                                id="topbarUserDropdown"
+                                                class="user-dropdown d-flex align-items-center dropend dropdown-toggle"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false"
+                                            >
+                                                <div class="avatar avatar-md2">
+                                                    <img
+                                                        src="assets/images/faces/1.jpg"
+                                                        alt="Avatar"
+                                                    />
+                                                </div>
+                                                <div class="text">
+                                                    <h6
+                                                        class="user-dropdown-name"
+                                                    >
+                                                        John Ducky
+                                                    </h6>
+                                                    <p
+                                                        class="user-dropdown-status text-sm text-muted"
+                                                    >
+                                                        Staff
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <ul
+                                                class="dropdown-menu dropdown-menu-end shadow-lg"
+                                                aria-labelledby="topbarUserDropdown"
+                                            >
+                                                <li>
+                                                    <a
+                                                        class="dropdown-item"
+                                                        href="#"
+                                                        >My Account</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="dropdown-item"
+                                                        href="#"
+                                                        >Settings</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <hr
+                                                        class="dropdown-divider"
+                                                    />
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="dropdown-item"
+                                                        href="auth-login.html"
+                                                        >Logout</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <section class="section">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <h3 class="card-title">
+                                            Kelola Data Dokter
+                                        </h3>
+                                    </div>
+                                    <div
+                                        class="col-12 col-md-6 order-first order-md-last"
+                                    >
+                                        <nav
+                                            aria-label="breadcrumb"
+                                            class="breadcrumb-header float-end"
+                                        >
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item">
+                                                    <a href="index.html"
+                                                        >Home</a
+                                                    >
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    <a href="#">Admin</a>
+                                                </li>
+                                                <li
+                                                    class="breadcrumb-item active"
+                                                    aria-current="page"
+                                                >
+                                                    Dokter
+                                                </li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="container-fluid ms-2 mb-3">
+                                    <a href="#" class="btn btn-primary"
+                                        >Tambah <i class="bi bi-plus-lg"></i
+                                    ></a>
+                                </div>
+                                <!-- Hoverable rows start -->
+                                <section class="section">
+                                    <div class="row" id="table-hover-row">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <!-- table hover -->
+                                                <div class="table-responsive">
+                                                    <table
+                                                        class="table table-hover mb-0"
+                                                    >
+                                                        <thead>
+                                                            <tr>
+                                                                <th>NO</th>
+                                                                <th>
+                                                                    Nama Dokter
+                                                                </th>
+                                                                <th>Gender</th>
+                                                                <th>
+                                                                    Keahlian
+                                                                </th>
+                                                                <th>Telpon</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td
+                                                                    class="text-bold-500"
+                                                                >
+                                                                    1
+                                                                </td>
+                                                                <td>
+                                                                    Dr. Rina
+                                                                    Kusuma
+                                                                </td>
+                                                                <td
+                                                                    class="text-bold-500"
+                                                                >
+                                                                    Wanita
+                                                                </td>
+                                                                <td>
+                                                                    Spesialis
+                                                                    perawatan
+                                                                    estetika
+                                                                    gigi
+                                                                </td>
+                                                                <td>
+                                                                    081231098
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <i
+                                                                            class="bi bi-eye-fill"
+                                                                        ></i
+                                                                    ></a>
+                                                                    <a href="#"
+                                                                        ><i
+                                                                            class="bi bi-pencil-square mx-2"
+                                                                        ></i>
+                                                                    </a>
+                                                                    <a href="#"
+                                                                        ><i
+                                                                            class="bi bi-trash-fill text-danger"
+                                                                        ></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    class="text-bold-500"
+                                                                >
+                                                                    2
+                                                                </td>
+                                                                <td>
+                                                                    Dr. Ahmad
+                                                                    Fauzi
+                                                                </td>
+                                                                <td
+                                                                    class="text-bold-500"
+                                                                >
+                                                                    Pria
+                                                                </td>
+                                                                <td>
+                                                                    Perawatan
+                                                                    gigi umum
+                                                                </td>
+                                                                <td>
+                                                                    081238190
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <i
+                                                                            class="bi bi-eye-fill"
+                                                                        ></i
+                                                                    ></a>
+                                                                    <a href="#"
+                                                                        ><i
+                                                                            class="bi bi-pencil-square mx-2"
+                                                                        ></i>
+                                                                    </a>
+                                                                    <a href="#"
+                                                                        ><i
+                                                                            class="bi bi-trash-fill text-danger"
+                                                                        ></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    class="text-bold-500"
+                                                                >
+                                                                    3
+                                                                </td>
+                                                                <td>
+                                                                    Drg. Nadya
+                                                                    Novianti
+                                                                </td>
+                                                                <td
+                                                                    class="text-bold-500"
+                                                                >
+                                                                    Wanita
+                                                                </td>
+                                                                <td>
+                                                                    Perawatan
+                                                                    gigi anak &
+                                                                    estetika
+                                                                    gigi
+                                                                </td>
+                                                                <td>
+                                                                    0831329810
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <i
+                                                                            class="bi bi-eye-fill"
+                                                                        ></i
+                                                                    ></a>
+                                                                    <a href="#"
+                                                                        ><i
+                                                                            class="bi bi-pencil-square mx-2"
+                                                                        ></i>
+                                                                    </a>
+                                                                    <a href="#"
+                                                                        ><i
+                                                                            class="bi bi-trash-fill text-danger"
+                                                                        ></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    class="text-bold-500"
+                                                                >
+                                                                    4
+                                                                </td>
+                                                                <td>
+                                                                    Drg.
+                                                                    Muhammad
+                                                                    Iqbal
+                                                                </td>
+                                                                <td
+                                                                    class="text-bold-500"
+                                                                >
+                                                                    Pria
+                                                                </td>
+                                                                <td>
+                                                                    Perawatan
+                                                                    edondontis &
+                                                                    gigi implant
+                                                                </td>
+                                                                <td>
+                                                                    083129381
+                                                                </td>
+                                                                <td>
+                                                                    <a href="#">
+                                                                        <i
+                                                                            class="bi bi-eye-fill"
+                                                                        ></i
+                                                                    ></a>
+                                                                    <a href="#"
+                                                                        ><i
+                                                                            class="bi bi-pencil-square mx-2"
+                                                                        ></i>
+                                                                    </a>
+                                                                    <a href="#"
+                                                                        ><i
+                                                                            class="bi bi-trash-fill text-danger"
+                                                                        ></i>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <!-- Hoverable rows end -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <footer>
+                    <div class="footer clearfix mb-0 text-muted">
+                        <div class="float-start">
+                            <p>2023 &copy; Kelompok 1</p>
+                        </div>
+                        <div class="float-end">
+                            <p>
+                                Crafted with
+                                <span class="text-danger"
+                                    ><i class="bi bi-heart"></i
+                                ></span>
+                                by
+                                <span>Mahasiswa STTI Nurul Fikri</span>
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>
